@@ -1,4 +1,5 @@
 {
+  "extends": "./tsconfig.paths.json",
   "compilerOptions": {
     "target": "es5",
     "module": "esnext",
@@ -25,5 +26,5 @@
     "src/setupTests.ts",
     "./node_modules/**/*"
   ],
-  "include": ["./src/**/*", "@types", "__tests__"]
+  "include": ["./src/**/*", "@types", "__tests__", "craco.config.js"]
 }
