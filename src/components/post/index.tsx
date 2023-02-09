@@ -2,7 +2,11 @@ import { BlogType } from '@/constants/blogs';
 import styled from 'styled-components';
 
 export const Post = ({ title, href }: BlogType) => {
-  return <_Wrapper href={href}>{title}</_Wrapper>;
+  return (
+    <_Wrapper target={'_blank'} href={href}>
+      {title}
+    </_Wrapper>
+  );
 };
 
 const _Wrapper = styled.a`
