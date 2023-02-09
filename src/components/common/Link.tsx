@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import styled from 'styled-components';
 
 interface PropsType {
-  Icon: ReactNode;
+  Icon: () => JSX.Element;
   children: ReactNode;
   href: string;
 }
