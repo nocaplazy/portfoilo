@@ -48,7 +48,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["core-js", "npm:3.26.1"],\
             ["css-loader", "virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:6.7.2"],\
             ["css-minimizer-webpack-plugin", "virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:4.2.2"],\
-            ["env-cmd", "npm:10.1.0"],\
             ["eslint", "npm:8.27.0"],\
             ["eslint-config-airbnb", "virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:19.0.4"],\
             ["eslint-config-airbnb-typescript", "virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:17.0.0"],\
@@ -4906,13 +4905,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:4.1.1", {\
-          "packageLocation": "./.yarn/cache/commander-npm-4.1.1-22a0fe921b-d7b9913ff9.zip/node_modules/commander/",\
-          "packageDependencies": [\
-            ["commander", "npm:4.1.1"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:7.2.0", {\
           "packageLocation": "./.yarn/cache/commander-npm-7.2.0-19178180f8-53501cbeee.zip/node_modules/commander/",\
           "packageDependencies": [\
@@ -5973,17 +5965,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/entities-npm-2.2.0-0fc8d5b2f7-19010dacaf.zip/node_modules/entities/",\
           "packageDependencies": [\
             ["entities", "npm:2.2.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["env-cmd", [\
-        ["npm:10.1.0", {\
-          "packageLocation": "./.yarn/cache/env-cmd-npm-10.1.0-85470635d6-efef550742.zip/node_modules/env-cmd/",\
-          "packageDependencies": [\
-            ["env-cmd", "npm:10.1.0"],\
-            ["commander", "npm:4.1.1"],\
-            ["cross-spawn", "npm:7.0.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -11273,7 +11254,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["core-js", "npm:3.26.1"],\
             ["css-loader", "virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:6.7.2"],\
             ["css-minimizer-webpack-plugin", "virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:4.2.2"],\
-            ["env-cmd", "npm:10.1.0"],\
             ["eslint", "npm:8.27.0"],\
             ["eslint-config-airbnb", "virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:19.0.4"],\
             ["eslint-config-airbnb-typescript", "virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:17.0.0"],\

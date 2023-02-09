@@ -1,15 +1,15 @@
 'use strict';
 
 const paths = require('./paths.js');
-const getClientEnvironment = require('./env.js');
+// const getClientEnvironment = require('./env.js');
 
-const webpack = require('webpack');
+// const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
-const env = getClientEnvironment(paths.publicUrlOrPath.slice(0, -1));
+// const env = getClientEnvironment(paths.publicUrlOrPath.slice(0, -1));
 
 module.exports = {
   entry: paths.appIndex,
@@ -45,7 +45,7 @@ module.exports = {
       template: paths.appHtml,
       filename: 'index.html',
       inject: true,
-      templateParameters: env.raw,
+      // templateParameters: env.raw,
     }),     
     new CopyPlugin({
       patterns: [
@@ -58,7 +58,7 @@ module.exports = {
         },
       ],
     }),
-    new webpack.DefinePlugin(env.stringified),
+    // new webpack.DefinePlugin(env.stringified),
   ],
 
   resolve: {
