@@ -41,7 +41,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:5.43.0"],\
             ["@typescript-eslint/parser", "virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:5.43.0"],\
             ["airbnb", "npm:0.0.2"],\
-            ["babel-loader", "virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:8.3.0"],\
+            ["babel-loader", "virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:9.1.2"],\
             ["case-sensitive-paths-webpack-plugin", "npm:2.4.0"],\
             ["clean-webpack-plugin", "virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:4.0.0"],\
             ["copy-webpack-plugin", "virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:11.0.0"],\
@@ -4136,24 +4136,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["babel-loader", [\
-        ["npm:8.3.0", {\
-          "packageLocation": "./.yarn/cache/babel-loader-npm-8.3.0-a5239d7ed2-d48bcf9e03.zip/node_modules/babel-loader/",\
+        ["npm:9.1.2", {\
+          "packageLocation": "./.yarn/cache/babel-loader-npm-9.1.2-a76340cb80-f0edb8e157.zip/node_modules/babel-loader/",\
           "packageDependencies": [\
-            ["babel-loader", "npm:8.3.0"]\
+            ["babel-loader", "npm:9.1.2"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:8.3.0", {\
-          "packageLocation": "./.yarn/__virtual__/babel-loader-virtual-1a59cb65e3/0/cache/babel-loader-npm-8.3.0-a5239d7ed2-d48bcf9e03.zip/node_modules/babel-loader/",\
+        ["virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:9.1.2", {\
+          "packageLocation": "./.yarn/__virtual__/babel-loader-virtual-f91580db9b/0/cache/babel-loader-npm-9.1.2-a76340cb80-f0edb8e157.zip/node_modules/babel-loader/",\
           "packageDependencies": [\
-            ["babel-loader", "virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:8.3.0"],\
+            ["babel-loader", "virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:9.1.2"],\
             ["@babel/core", "npm:7.20.2"],\
             ["@types/babel__core", null],\
             ["@types/webpack", null],\
             ["find-cache-dir", "npm:3.3.2"],\
-            ["loader-utils", "npm:2.0.4"],\
-            ["make-dir", "npm:3.1.0"],\
-            ["schema-utils", "npm:2.7.1"],\
+            ["schema-utils", "npm:4.0.0"],\
             ["webpack", "virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:5.75.0"]\
           ],\
           "packagePeers": [\
@@ -11266,7 +11264,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:5.43.0"],\
             ["@typescript-eslint/parser", "virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:5.43.0"],\
             ["airbnb", "npm:0.0.2"],\
-            ["babel-loader", "virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:8.3.0"],\
+            ["babel-loader", "virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:9.1.2"],\
             ["case-sensitive-paths-webpack-plugin", "npm:2.4.0"],\
             ["clean-webpack-plugin", "virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:4.0.0"],\
             ["copy-webpack-plugin", "virtual:4a532ba43cc8d70a35efd9393b98d80778ab0ef9a14cfb783a6cbd2453b1d9c7fb48e2ab933b03b6365aeb23733fcd39d8a8866c3eb85cbd7e3c4a0c972ef0f5#npm:11.0.0"],\
@@ -13470,7 +13468,6 @@ const StringDecoder = require('string_decoder');
 const url = require('url');
 const os = require('os');
 const nodeUtils = require('util');
-const readline = require('readline');
 const assert = require('assert');
 const stream = require('stream');
 const zlib = require('zlib');
@@ -17383,12 +17380,6 @@ class FileHandle {
     } finally {
       this[kUnref]();
     }
-  }
-  readLines(options) {
-    return readline.createInterface({
-      input: this.createReadStream(options),
-      crlfDelay: Infinity
-    });
   }
   async stat(opts) {
     try {
@@ -22085,9 +22076,6 @@ function getPathForDisplay(p) {
   return npath.normalize(npath.fromPortablePath(p));
 }
 
-const [major, minor] = process.versions.node.split(`.`).map((value) => parseInt(value, 10));
-const WATCH_MODE_MESSAGE_USES_ARRAYS = major > 19 || major === 19 && minor >= 2;
-
 const builtinModules = new Set(require$$0.Module.builtinModules || Object.keys(process.binding(`natives`)));
 const isBuiltinModule = (request) => request.startsWith(`node:`) || builtinModules.has(request);
 function readPackageScope(checkPath) {
@@ -22122,19 +22110,13 @@ Instead change the require of ${basename} in ${parentPath} to a dynamic import()
   err.code = `ERR_REQUIRE_ESM`;
   return err;
 }
-function reportRequiredFilesToWatchMode(files) {
-  if (process.env.WATCH_REPORT_DEPENDENCIES && process.send) {
-    files = files.map((filename) => npath.fromPortablePath(VirtualFS.resolveVirtual(npath.toPortablePath(filename))));
-    if (WATCH_MODE_MESSAGE_USES_ARRAYS) {
-      process.send({ "watch:require": files });
-    } else {
-      for (const filename of files) {
-        process.send({ "watch:require": filename });
-      }
-    }
+
+const shouldReportRequiredModules = process.env.WATCH_REPORT_DEPENDENCIES;
+function reportModuleToWatchMode(filename) {
+  if (shouldReportRequiredModules && process.send) {
+    process.send({ "watch:require": npath.fromPortablePath(VirtualFS.resolveVirtual(npath.toPortablePath(filename))) });
   }
 }
-
 function applyPatch(pnpapi, opts) {
   const defaultCache = {};
   let enableNativeHooks = true;
@@ -22194,7 +22176,7 @@ function applyPatch(pnpapi, opts) {
     }
     const module = new require$$0.Module(modulePath, parent != null ? parent : void 0);
     module.pnpApiPath = moduleApiPath;
-    reportRequiredFilesToWatchMode([modulePath]);
+    reportModuleToWatchMode(modulePath);
     entry.cache[modulePath] = module;
     if (isMain) {
       process.mainModule = module;
@@ -23552,7 +23534,6 @@ Required by: ${issuerLocator.name}@${issuerLocator.reference} (via ${issuerForDi
     if (qualifiedPath) {
       return ppath.normalize(qualifiedPath);
     } else {
-      reportRequiredFilesToWatchMode(candidates.map((candidate) => npath.fromPortablePath(candidate)));
       const unqualifiedPathForDisplay = getPathForDisplay(unqualifiedPath);
       const containingPackage = findPackageLocator(unqualifiedPath);
       if (containingPackage) {
