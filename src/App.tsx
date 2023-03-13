@@ -5,11 +5,10 @@
 // 버튼 액티브 효괴
 // 다국어 지원
 // 텍스트 최초방문시 위에서 아래로
-
 import { Route, Routes } from 'react-router-dom';
 import { AdditionalProjects } from './pages/AdditionalProjects';
 import { HomePage } from './pages/home';
-import { ProjectDetail } from './pages/ProjectDetail';
+import { ProjectDetail } from './pages/projectDetail';
 import { StyleProvider } from './styles';
 
 export const App = () => (

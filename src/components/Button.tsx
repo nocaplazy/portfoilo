@@ -5,19 +5,19 @@ interface PropsType {
   Icon?: ReactNode;
   iconLocation?: 'right' | 'left';
   children: ReactNode;
-  margin?: string;
   onClick?: () => void;
+  className?: string;
 }
 
 export const Button = ({
   iconLocation = 'right',
   Icon,
   children,
-  margin,
   onClick,
+  className,
 }: PropsType) => {
   return (
-    <_Wrapper margin={margin} onClick={onClick}>
+    <_Wrapper className={className} onClick={onClick}>
       {iconLocation === 'left' && Icon && Icon}
       {children}
       {iconLocation === 'right' && Icon && Icon}
@@ -25,7 +25,7 @@ export const Button = ({
   );
 };
 
-const _Wrapper = styled.button<{ margin: string }>`
+const _Wrapper = styled.button`
   height: 70px;
   border-radius: 8px;
   display: flex;
@@ -33,11 +33,10 @@ const _Wrapper = styled.button<{ margin: string }>`
   width: 100%;
   align-items: center;
   font-size: 28px;
-  margin: ${({ margin }) => margin};
   ${({ theme }) => theme.font.medium};
   gap: 22px;
   transition: 0.25s;
   :hover {
-    background-color: ${({ theme }) => theme.color.gray4};
+    background-color: ${({ theme }) => theme.color.gray100};
   }
 `;

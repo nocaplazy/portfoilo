@@ -3,15 +3,15 @@ import styled from 'styled-components';
 
 interface PropsType {
   listItem: ReactNode[];
-  margin?: string;
+  className?: string;
 }
 
-export const List = ({ listItem, margin }: PropsType) => {
+export const List = ({ listItem, className }: PropsType) => {
   return (
-    <_Wrapper margin={margin}>
-      {listItem.map((Item, idx) => {
-        return <_Li key={idx}>{Item}</_Li>;
-      })}
+    <_Wrapper className={className}>
+      {listItem.map((Item, idx) => (
+        <_Li key={idx}>{Item}</_Li>
+      ))}
     </_Wrapper>
   );
 };
@@ -32,13 +32,12 @@ const _Li = styled.li`
     border-radius: 70%;
     width: 7px;
     height: 7px;
-    background-color: ${({ theme }) => theme.color.gray1};
+    background-color: ${({ theme }) => theme.color.gray200};
   }
 `;
 
-const _Wrapper = styled.ul<{ margin: string }>`
+const _Wrapper = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin: ${({ margin }) => margin};
 `;

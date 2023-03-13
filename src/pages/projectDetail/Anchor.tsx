@@ -1,16 +1,15 @@
-import { ReactNode } from 'react';
 import styled from 'styled-components';
 
 interface PropsType {
-  Icon: () => JSX.Element;
-  children: ReactNode;
   href: string;
+  Icon: JSX.Element;
+  children: string;
 }
 
-export const Link = ({ Icon, children, href }: PropsType) => {
+export const Anchor = ({ href, Icon, children }: PropsType) => {
   return (
     <_Wrapper href={href}>
-      <Icon />
+      {Icon}
       {children}
     </_Wrapper>
   );
