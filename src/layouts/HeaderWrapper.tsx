@@ -8,7 +8,8 @@ interface PropsType {
 export const HeaderWrapper = ({ children }: PropsType) => {
   const [hideHeader, setHideHeader] = useState<boolean>(false);
   return (
-    <div onWheel={(e) => setHideHeader(e.nativeEvent.deltaY > 0)}>
+    // <div onWheel={(e) => setHideHeader(e.nativeEvent.deltaY > 0)}>
+    <div>
       <Header hideHeader={hideHeader} />
       {children}
     </div>

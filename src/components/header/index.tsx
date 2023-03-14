@@ -7,9 +7,9 @@ interface PropsType {
 
 const navigationList = [
   { id: 'body', text: '자기소개' },
-  { id: '#projects', text: '프로젝트' },
-  { id: '#blogs', text: '블로그글' },
   { id: '#skills', text: '기술스택' },
+  { id: '#blogs', text: '블로그글' },
+  { id: '#projects', text: '프로젝트' },
   { id: '#activitys', text: '활동' },
 ];
 
@@ -17,16 +17,16 @@ const isCurrentScrolled = (position: number, idx: number) => {
   if (680 > position && idx === 0) {
     return true;
   }
-  if (1870 > position && position > 680 && idx === 1) {
+  if (1440 > position && position > 680 && idx === 1) {
     return true;
   }
-  if (2470 > position && position > 1870 && idx === 2) {
+  if (2032 > position && position > 1440 && idx === 2) {
     return true;
   }
-  if (3460 > position && position > 2470 && idx === 3) {
+  if (3140 > position && position > 2032 && idx === 3) {
     return true;
   }
-  if (position > 3460 && idx === 4) {
+  if (position > 3140 && idx === 4) {
     return true;
   }
 };

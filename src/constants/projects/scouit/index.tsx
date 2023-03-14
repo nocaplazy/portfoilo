@@ -1,5 +1,6 @@
 import { LinkSvg } from '@/assets';
-import { ProjectType } from '.';
+import { ProjectType } from '..';
+import Scouit from './scouit.jpeg';
 
 export const scouit: ProjectType = {
   id: '4',
@@ -19,7 +20,7 @@ export const scouit: ProjectType = {
     },
   ],
   features: [],
-  thumnail: '',
+  thumnail: Scouit,
   role: '',
   personnel: '',
 };

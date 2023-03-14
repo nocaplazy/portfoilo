@@ -8,6 +8,7 @@ import { _Text } from '@/components/Text';
 import { Tag } from '@/constants/Icon';
 import { useEffect } from 'react';
 import { Tooltip } from '../ToolTip';
+import { Close } from '@/assets/svgs/Close';
 
 interface PropsType {
   handleCloseModal: () => void;
@@ -43,9 +44,12 @@ export const ProjectDetailModal = ({
       }}
     >
       <ModalContent onClick={(e) => e.stopPropagation()}>
-        <_Text size="36px" weight="semiBold">
-          {title}
-        </_Text>
+        <_Header>
+          <_Text size="36px" weight="semiBold">
+            {title}
+          </_Text>
+          <_Close onClick={handleCloseModal} />
+        </_Header>
         <_Text color="gray300" size="20px" weight="regular">
           {personnel}
         </_Text>
@@ -78,6 +82,31 @@ export const ProjectDetailModal = ({
     </ModalContainer>
   );
 };
+
+const _Close = styled(Close)`
+  cursor: pointer;
+  border-radius: 70%;
+  padding: 8px;
+  :hover {
+    background-color: ${({ theme }) => theme.color.gray100};
+  }
+  :active {
+    background-color: ${({ theme }) => theme.color.gray200};
+  }
+`;
+
+const _Header = styled.header`
+  position: sticky;
+  height: 60px;
+  background-color: #fff;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid ${({ theme }) => theme.color.gray200};
+  padding: 10px 0;
+`;
 
 const _IconWrapper = styled.div`
   display: flex;

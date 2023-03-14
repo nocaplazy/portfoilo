@@ -8,15 +8,15 @@ const TooltipWrapper = styled.div`
 
 const TooltipContent = styled.span`
   display: inline-block;
-  width: fit-content;
   visibility: hidden;
+  width: max-content;
   background-color: black;
   color: #fff;
   text-align: center;
   padding: 5px 10px;
   border-radius: 6px;
   position: absolute;
-  z-index: 1;
+  z-index: 4;
   bottom: 125%;
   left: 50%;
   transform: translateX(-50%);

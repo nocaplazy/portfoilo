@@ -6,7 +6,6 @@ import { ProjectDetailModal } from './project/ProjectDetailModal';
 import { ModalPortal } from './ModalPortal';
 import { useInversion } from '@/hooks/useInversion';
 import { Tooltip } from './ToolTip';
-import { useState } from 'react';
 
 export const ProjectCard = ({
   id,
@@ -15,25 +14,15 @@ export const ProjectCard = ({
   title,
   technologyStackList,
 }: ProjectType) => {
-  // const {
-  //   state: showModal,
-  //   correctState: handleOpenModal,
-  //   incorrectState: handleCloseModal,
-  // } = useInversion();
-
-  const [state, setState] = useState<boolean>(false);
-
-  const correctState = () => {
-    setState(true);
-  };
-
-  const incorrectState = () => {
-    setState(false);
-  };
+  const {
+    state: showModal,
+    correctState: handleOpenModal,
+    incorrectState: handleCloseModal,
+  } = useInversion();
 
   return (
     <>
-      <_Project onClick={correctState}>
+      <_Project onClick={handleOpenModal}>
         <_ProjectImg>
           <img src={thumnail} />
         </_ProjectImg>
@@ -50,9 +39,9 @@ export const ProjectCard = ({
             </Tooltip>
           ))}
         </_FlexWrap>
-        {state && (
+        {showModal && (
           <ModalPortal>
-            <ProjectDetailModal id={id} handleCloseModal={incorrectState} />
+            <ProjectDetailModal id={id} handleCloseModal={handleCloseModal} />
           </ModalPortal>
         )}
       </_Project>

@@ -9,6 +9,7 @@ export const technologys = [
       '반응형을 적용할 수 있습니다.',
       '다양한 브라우저를 지원할 수 있습니다.',
       'Express로 Rest Api를 만들 수 있습니다.',
+      'Webpack을 이용하여 JavaScript 번들 사이즈를 크게 줄인 경험이 있습니다.',
     ],
   },
   {
