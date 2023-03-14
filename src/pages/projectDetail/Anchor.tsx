@@ -1,17 +1,16 @@
+import { Tooltip } from '@/components/ToolTip';
 import styled from 'styled-components';
 
 interface PropsType {
   href: string;
   Icon: JSX.Element;
-  children: string;
 }
 
-export const Anchor = ({ href, Icon, children }: PropsType) => {
+export const Anchor = ({ href, Icon }: PropsType) => {
   return (
-    <Container href={href}>
-      {Icon}
-      <Link>{children}</Link>
-    </Container>
+    <Tooltip title={href}>
+      <Container href={href}>{Icon}</Container>
+    </Tooltip>
   );
 };
 
@@ -28,8 +27,4 @@ const Container = styled.a`
   &:hover {
     background-color: ${({ theme }) => theme.color.gray100};
   }
-`;
-
-const Link = styled.span`
-  font-size: 16px;
 `;

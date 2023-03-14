@@ -6,6 +6,7 @@ import { ProjectDetailModal } from './ProjectDetailModal';
 import { ModalPortal } from './ModalPortal';
 import { useInversion } from '@/hooks/useInversion';
 import { Tooltip } from './ToolTip';
+import { useState } from 'react';
 
 export const ProjectCard = ({
   id,
@@ -14,34 +15,48 @@ export const ProjectCard = ({
   title,
   technologyStackList,
 }: ProjectType) => {
-  const {
-    state: showModal,
-    correctState: handleOpenModal,
-    incorrectState: handleCloseModal,
-  } = useInversion();
+  // const {
+  //   state: showModal,
+  //   correctState: handleOpenModal,
+  //   incorrectState: handleCloseModal,
+  // } = useInversion();
+
+  const [state, setState] = useState<boolean>(false);
+
+  const correctState = () => {
+    setState(true);
+  };
+
+  const incorrectState = () => {
+    setState(false);
+  };
 
   return (
-    <_Project onClick={handleOpenModal}>
-      <_ProjectImg>
-        <img src={thumnail} />
-      </_ProjectImg>
-      <_Title size="24px" weight="medium">
-        {title}
-      </_Title>
-      <_Text color="gray300" size="20px" weight="regular">
-        {MVP}
-      </_Text>
-      <_FlexWrap>
-        {technologyStackList.map((tag) => (
-          <Tooltip title={tag}>{Tag[tag]}</Tooltip>
-        ))}
-      </_FlexWrap>
-      {showModal && (
-        <ModalPortal>
-          <ProjectDetailModal id={id} handleCloseModal={handleCloseModal} />
-        </ModalPortal>
-      )}
-    </_Project>
+    <>
+      <_Project onClick={correctState}>
+        <_ProjectImg>
+          <img src={thumnail} />
+        </_ProjectImg>
+        <_Title size="24px" weight="medium">
+          {title}
+        </_Title>
+        <_Text color="gray300" size="20px" weight="regular">
+          {MVP}
+        </_Text>
+        <_FlexWrap>
+          {technologyStackList.map((tag, idx) => (
+            <Tooltip key={idx} title={tag}>
+              {Tag[tag]}
+            </Tooltip>
+          ))}
+        </_FlexWrap>
+        {state && (
+          <ModalPortal>
+            <ProjectDetailModal id={id} handleCloseModal={incorrectState} />
+          </ModalPortal>
+        )}
+      </_Project>
+    </>
   );
 };
 

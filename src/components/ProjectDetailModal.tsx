@@ -3,7 +3,6 @@ import { Anchor } from '@/pages/projectDetail/Anchor';
 import { Expandable } from '@/pages/projectDetail/Expandable';
 import { MinimumViableProduct } from '@/pages/projectDetail/MinimumViableProduct';
 import { Template } from '@/pages/projectDetail/Template';
-import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { _Text } from '@/components/Text';
 import { Tag } from '@/constants/Icon';
@@ -27,8 +26,6 @@ export const ProjectDetailModal = ({
       body.style.overflow = 'auto';
     };
   }, []);
-
-  const navigate = useNavigate();
   const {
     MVP,
     title,
@@ -40,41 +37,43 @@ export const ProjectDetailModal = ({
   } = [...projects, ...addtionalProjects].find(({ id }) => id === routeId);
 
   return (
-    <ModalContainer>
-      <ReactOutsideClickHandler onOutsideClick={handleCloseModal}>
-        <ModalContent>
-          <_Text size="36px" weight="semiBold">
-            {title}
-          </_Text>
-          <_Text color="gray300" size="20px" weight="regular">
-            {personnel}
-          </_Text>
-          <_FlexWrap>
-            {technologyStackList.map((tag) => (
-              <Tooltip title={tag}>{Tag[tag]}</Tooltip>
+    <ModalContainer
+      onClick={(e) => {
+        e.stopPropagation();
+        handleCloseModal();
+      }}
+    >
+      <ModalContent onClick={(e) => e.stopPropagation()}>
+        <_Text size="36px" weight="semiBold">
+          {title}
+        </_Text>
+        <_Text color="gray300" size="20px" weight="regular">
+          {personnel}
+        </_Text>
+        <_FlexWrap>
+          {technologyStackList.map((tag, idx) => (
+            <Tooltip key={idx} title={tag}>
+              {Tag[tag]}
+            </Tooltip>
+          ))}
+        </_FlexWrap>
+        <MinimumViableProduct description={MVP} />
+        <img width={'100%'} src={thumnail} />
+        <_LinkWrapper>
+          {anchor &&
+            anchor.map(({ url, alt, Icon }, idx) => (
+              <Anchor key={idx} href={url} Icon={Icon} />
             ))}
-          </_FlexWrap>
-          <MinimumViableProduct description={MVP} />
-          <img width={'100%'} src={thumnail} />
-
-          <_LinkWrapper>
-            {anchor &&
-              anchor.map(({ url, alt, Icon }, idx) => (
-                <Anchor key={idx} href={url} Icon={Icon}>
-                  {alt}
-                </Anchor>
-              ))}
-          </_LinkWrapper>
-          <Template title="기능">
-            {features.map(({ summary, detail }, idx) => (
-              <Expandable key={idx} title={summary}>
-                {detail}
-              </Expandable>
-            ))}
-          </Template>
-          <Template title="당담역할">fqwqfw</Template>
-        </ModalContent>
-      </ReactOutsideClickHandler>
+        </_LinkWrapper>
+        <Template title="기능">
+          {features.map(({ summary, detail }, idx) => (
+            <Expandable key={idx} title={summary}>
+              {detail}
+            </Expandable>
+          ))}
+        </Template>
+        <Template title="당담역할">fqwqfw</Template>
+      </ModalContent>
     </ModalContainer>
   );
 };
@@ -83,20 +82,18 @@ const ModalContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  overflow-y: auto;
+  overflow-y: scroll;
   z-index: 2;
 `;
 
 const ModalContent = styled.div`
   background-color: #fff;
   width: 900px;
-  margin-bottom: 200px;
-  padding: 20px;
+  margin: 100px auto;
+  padding: 60px 40px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 `;

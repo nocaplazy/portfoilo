@@ -1,7 +1,7 @@
 export const Next = () => {
   return (
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-      <g clip-path="url(#clip0_1705_10285)">
+      <g clipPath="url(#clip0_1705_10285)">
         <mask
           id="mask0_1705_10285"
           maskUnits="userSpaceOnUse"

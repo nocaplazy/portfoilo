@@ -43,9 +43,7 @@ export const ProjectDetail = () => {
       <_LinkWrapper>
         {anchor &&
           anchor.map(({ url, alt, Icon }, idx) => (
-            <Anchor key={idx} href={url} Icon={Icon}>
-              {alt}
-            </Anchor>
+            <Anchor key={idx} href={url} Icon={Icon} />
           ))}
       </_LinkWrapper>
       <Template title="기능">
