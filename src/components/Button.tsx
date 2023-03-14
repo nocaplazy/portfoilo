@@ -34,7 +34,7 @@ const _Wrapper = styled.button`
   align-items: center;
   font-size: 28px;
   ${({ theme }) => theme.font.medium};
-  gap: 22px;
+  gap: 12px;
   transition: 0.25s;
   :hover {
     background-color: ${({ theme }) => theme.color.gray100};

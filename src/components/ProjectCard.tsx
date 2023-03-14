@@ -2,7 +2,7 @@ import { ProjectType } from '@/constants/projects';
 import { _Text } from '@/components/Text';
 import styled from 'styled-components';
 import { Tag } from '@/constants/Icon';
-import { ProjectDetailModal } from './ProjectDetailModal';
+import { ProjectDetailModal } from './project/ProjectDetailModal';
 import { ModalPortal } from './ModalPortal';
 import { useInversion } from '@/hooks/useInversion';
 import { Tooltip } from './ToolTip';

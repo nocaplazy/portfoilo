@@ -34,7 +34,13 @@ export const AdditionalProjects = () => {
 };
 
 const _Button = styled(Button)`
-  margin: 80px 0;
+  height: 40px;
+  position: sticky;
+  top: 10px;
+  background-color: #fff;
+  z-index: 1;
+  font-size: 16px;
+  border: 1px solid ${({ theme }) => theme.color.gray200};
 `;
 
 const _SpaceBetween = styled.div`

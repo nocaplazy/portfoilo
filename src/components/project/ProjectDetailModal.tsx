@@ -1,14 +1,13 @@
 import { addtionalProjects, projects } from '@/constants/projects';
-import { Anchor } from '@/pages/projectDetail/Anchor';
-import { Expandable } from '@/pages/projectDetail/Expandable';
-import { MinimumViableProduct } from '@/pages/projectDetail/MinimumViableProduct';
-import { Template } from '@/pages/projectDetail/Template';
+import { Anchor } from '@/components/project/Anchor';
+import { Expandable } from '@/components/project/Expandable';
+import { MinimumViableProduct } from '@/components/project/MinimumViableProduct';
+import { Template } from '@/components/project/Template';
 import styled from 'styled-components';
 import { _Text } from '@/components/Text';
 import { Tag } from '@/constants/Icon';
-import ReactOutsideClickHandler from 'react-outside-click-handler';
 import { useEffect } from 'react';
-import { Tooltip } from './ToolTip';
+import { Tooltip } from '../ToolTip';
 
 interface PropsType {
   handleCloseModal: () => void;
@@ -51,20 +50,22 @@ export const ProjectDetailModal = ({
           {personnel}
         </_Text>
         <_FlexWrap>
-          {technologyStackList.map((tag, idx) => (
-            <Tooltip key={idx} title={tag}>
-              {Tag[tag]}
-            </Tooltip>
-          ))}
+          <_IconWrapper>
+            {technologyStackList.map((tag, idx) => (
+              <Tooltip key={idx} title={tag}>
+                {Tag[tag]}
+              </Tooltip>
+            ))}
+          </_IconWrapper>
+          <_LinkWrapper>
+            {anchor &&
+              anchor.map(({ url, alt, Icon }, idx) => (
+                <Anchor key={idx} href={url} Icon={Icon} />
+              ))}
+          </_LinkWrapper>
         </_FlexWrap>
         <MinimumViableProduct description={MVP} />
         <img width={'100%'} src={thumnail} />
-        <_LinkWrapper>
-          {anchor &&
-            anchor.map(({ url, alt, Icon }, idx) => (
-              <Anchor key={idx} href={url} Icon={Icon} />
-            ))}
-        </_LinkWrapper>
         <Template title="기능">
           {features.map(({ summary, detail }, idx) => (
             <Expandable key={idx} title={summary}>
@@ -77,6 +78,11 @@ export const ProjectDetailModal = ({
     </ModalContainer>
   );
 };
+
+const _IconWrapper = styled.div`
+  display: flex;
+  gap: 20px;
+`;
 
 const ModalContainer = styled.div`
   position: fixed;
@@ -101,12 +107,12 @@ const ModalContent = styled.div`
 const _LinkWrapper = styled.div`
   display: flex;
   gap: 20px;
-  margin-top: 20px;
 `;
 
 const _FlexWrap = styled.div`
   display: flex;
-  flex-wrap: wrap;
   gap: 15px;
   margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
 `;
