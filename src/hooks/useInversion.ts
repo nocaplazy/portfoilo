@@ -7,8 +7,18 @@ export const useInversion = () => {
     setState(!state);
   };
 
+  const correctState = () => {
+    setState(true);
+  };
+
+  const incorrectState = () => {
+    setState(false);
+  };
+
   return {
     state,
     invertState,
+    correctState,
+    incorrectState,
   };
 };

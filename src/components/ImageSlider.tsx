@@ -43,12 +43,13 @@ const _BallWrapper = styled.div`
   margin-top: 10px;
 `;
 
-const _Ball = styled.div`
+const _Ball = styled.div<{ isCurrent: boolean }>`
   width: 15px;
   height: 15px;
   border-radius: 70%;
   cursor: pointer;
-  background-color: ${({ theme }) => theme.color.gray3};
+  background-color: ${({ theme, isCurrent }) =>
+    isCurrent ? theme.color.point : theme.color.gray300};
 `;
 
 export const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
@@ -76,7 +77,11 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
       </SliderContainer>
       <_BallWrapper>
         {images.map((imgUrl, idx) => (
-          <_Ball onClick={() => setCurrentSlide(idx)} />
+          <_Ball
+            isCurrent={idx === currentSlide}
+            onClick={() => setCurrentSlide(idx)}
+            key={idx}
+          />
         ))}
       </_BallWrapper>
       <PrevButton onClick={handlePrevSlide}>Prev</PrevButton>

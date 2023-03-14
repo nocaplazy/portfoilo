@@ -8,7 +8,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { AdditionalProjects } from './pages/AdditionalProjects';
 import { HomePage } from './pages/home';
-import { ProjectDetail } from './pages/projectDetail';
 import { StyleProvider } from './styles';
 
 export const App = () => (
@@ -16,7 +15,6 @@ export const App = () => (
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/project/more" element={<AdditionalProjects />} />
-      <Route path="/project/:id" element={<ProjectDetail />} />
     </Routes>
   </StyleProvider>
 );

@@ -3,3 +3,4 @@ export { default as endingImg } from './ending.jpg';
 export { default as entryImg } from './entry.png';
 export { default as repoImg } from './repo.png';
 export { default as simply } from './simply.png';
+export { default as lazy05 } from './lazy05.png';

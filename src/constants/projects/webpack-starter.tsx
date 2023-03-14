@@ -1,10 +1,11 @@
 import { LinkSvg } from '@/assets';
 import { ProjectType } from '.';
+import { lazy05 } from '@/assets/imgs';
 
 export const lazy05CreateReactApp: ProjectType = {
   id: '10',
   title: '@lazy05/create-react-app',
-  MVP: '당신이 지원자라면? 프로필을 등록해서 회사에게 스카웃받고 원하는 회사에 대한 정보를 쉽게 확인하세요. 당신이 CEO라면? 원하는 인재를 스카웃하고 면접 프로세스 관리를 편리하게 해보세요.',
+  MVP: 'npx @lazy05/create-react-app name으로 편하게 세팅해보세요 !!',
   technologyStackList: ['react', 'typescript', 'webpack'],
   anchor: [
     {
@@ -19,7 +20,7 @@ export const lazy05CreateReactApp: ProjectType = {
     },
   ],
   features: [],
-  thumnail: '',
+  thumnail: lazy05,
   role: '',
   personnel: '',
 };

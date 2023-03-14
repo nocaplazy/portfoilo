@@ -1,11 +1,11 @@
 import { simplyProject } from './simply';
-import { TagType } from '@/components/tag';
 import { scouit } from './scouit';
 import { entry } from './entry';
 import { dms } from './dms';
 import { repo } from './repo';
 import { ReactNode } from 'react';
 import { lazy05CreateReactApp } from './webpack-starter';
+import { TagType } from '../Icon';
 
 interface FunctionType {
   summary: string;

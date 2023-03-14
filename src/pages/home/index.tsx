@@ -6,6 +6,7 @@ import { HeaderWrapper } from '@/layouts/HeaderWrapper';
 import styled from 'styled-components';
 import { SectionList } from './sectionList';
 import { Ending } from './Ending';
+import { useInversion } from '@/hooks/useInversion';
 
 export const HomePage = () => {
   return (

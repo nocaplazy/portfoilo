@@ -15,8 +15,8 @@ export const Technology = ({ title, description }: PropsType) => {
         {title}
       </_Title>
       <List
-        listItem={description.map((des) => (
-          <_Text size="20px" weight="light">
+        listItem={description.map((des, idx) => (
+          <_Text key={idx} size="20px" weight="light">
             {des}
           </_Text>
         ))}

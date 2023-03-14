@@ -10,6 +10,7 @@ const navigationList = [
   { id: '#projects', text: '프로젝트' },
   { id: '#blogs', text: '블로그글' },
   { id: '#skills', text: '기술스택' },
+  { id: '#activitys', text: '활동' },
 ];
 
 const isCurrentScrolled = (position: number, idx: number) => {
@@ -22,16 +23,21 @@ const isCurrentScrolled = (position: number, idx: number) => {
   if (2470 > position && position > 1870 && idx === 2) {
     return true;
   }
-  if (position > 2470 && idx === 3) {
+  if (3460 > position && position > 2470 && idx === 3) {
+    return true;
+  }
+  if (position > 3460 && idx === 4) {
     return true;
   }
 };
 
 export const Header = ({ hideHeader }: PropsType) => {
-  const [position, setPosition] = useState(0);
+  const [position, setPosition] = useState<number>(0);
+
   function onScroll() {
     setPosition(window.scrollY);
   }
+
   useEffect(() => {
     window.addEventListener('scroll', onScroll);
     return () => {
@@ -46,6 +52,7 @@ export const Header = ({ hideHeader }: PropsType) => {
           <ul>
             {navigationList.map((navItem, idx) => (
               <_NavigationItem
+                key={idx}
                 onClick={() =>
                   document
                     .querySelector(navItem.id)

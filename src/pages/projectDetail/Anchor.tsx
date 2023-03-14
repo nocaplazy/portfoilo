@@ -8,19 +8,28 @@ interface PropsType {
 
 export const Anchor = ({ href, Icon, children }: PropsType) => {
   return (
-    <_Wrapper href={href}>
+    <Container href={href}>
       {Icon}
-      {children}
-    </_Wrapper>
+      <Link>{children}</Link>
+    </Container>
   );
 };
 
-const _Wrapper = styled.a`
-  ${({ theme }) => theme.font.semiBold};
-  font-size: 20px;
+const Container = styled.a`
   display: flex;
   align-items: center;
-  gap: 6px;
-  text-decoration: underline;
-  text-underline-position: under;
+  gap: 7px;
+  padding: 7px 10px;
+  border-radius: 4px;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.color.gray100};
+  }
+`;
+
+const Link = styled.span`
+  font-size: 16px;
 `;

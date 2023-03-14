@@ -1,8 +1,11 @@
 import { ProjectType } from '@/constants/projects';
 import { _Text } from '@/components/Text';
-import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import { TechnologyTag } from './tag';
+import { Tag } from '@/constants/Icon';
+import { ProjectDetailModal } from './ProjectDetailModal';
+import { ModalPortal } from './ModalPortal';
+import { useInversion } from '@/hooks/useInversion';
+import { Tooltip } from './ToolTip';
 
 export const ProjectCard = ({
   id,
@@ -11,9 +14,14 @@ export const ProjectCard = ({
   title,
   technologyStackList,
 }: ProjectType) => {
-  const navigate = useNavigate();
+  const {
+    state: showModal,
+    correctState: handleOpenModal,
+    incorrectState: handleCloseModal,
+  } = useInversion();
+
   return (
-    <_Project onClick={() => navigate(`/project/${id}`)}>
+    <_Project onClick={handleOpenModal}>
       <_ProjectImg>
         <img src={thumnail} />
       </_ProjectImg>
@@ -24,10 +32,15 @@ export const ProjectCard = ({
         {MVP}
       </_Text>
       <_FlexWrap>
-        {technologyStackList.map((tag, idx) => (
-          <TechnologyTag key={idx} tag={tag} />
+        {technologyStackList.map((tag) => (
+          <Tooltip title={tag}>{Tag[tag]}</Tooltip>
         ))}
       </_FlexWrap>
+      {showModal && (
+        <ModalPortal>
+          <ProjectDetailModal id={id} handleCloseModal={handleCloseModal} />
+        </ModalPortal>
+      )}
     </_Project>
   );
 };

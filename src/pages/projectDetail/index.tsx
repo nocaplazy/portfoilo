@@ -1,11 +1,9 @@
-import { Arrow, GithubSvg, LinkSvg } from '@/assets';
+import { Arrow } from '@/assets';
 import { Button } from '@/components/Button';
-import { TechnologyTag } from '@/components/tag';
 import { _Text } from '@/components/Text';
+import { Tag } from '@/constants/Icon';
 import { addtionalProjects, projects } from '@/constants/projects';
-import { useInversion } from '@/hooks/useInversion';
 import { Column } from '@/layouts/Column';
-import { Section } from '@/layouts/Section';
 import { useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { Anchor } from './Anchor';
@@ -38,25 +36,23 @@ export const ProjectDetail = () => {
       <_Text color="gray300" size="20px" weight="regular">
         {personnel}
       </_Text>
-      <_FlexWrap>
-        {technologyStackList.map((tag) => (
-          <TechnologyTag tag={tag} />
-        ))}
-      </_FlexWrap>
+      <_FlexWrap>{technologyStackList.map((tag) => Tag[tag])}</_FlexWrap>
       <MinimumViableProduct description={MVP} />
       <img width={'100%'} src={thumnail} />
 
       <_LinkWrapper>
         {anchor &&
-          anchor.map(({ url, alt, Icon }) => (
-            <Anchor href={url} Icon={Icon}>
+          anchor.map(({ url, alt, Icon }, idx) => (
+            <Anchor key={idx} href={url} Icon={Icon}>
               {alt}
             </Anchor>
           ))}
       </_LinkWrapper>
       <Template title="기능">
-        {features.map(({ summary, detail }) => (
-          <Expandable title={summary}>{detail}</Expandable>
+        {features.map(({ summary, detail }, idx) => (
+          <Expandable key={idx} title={summary}>
+            {detail}
+          </Expandable>
         ))}
       </Template>
       <Template title="당담역할">fqwqfw</Template>

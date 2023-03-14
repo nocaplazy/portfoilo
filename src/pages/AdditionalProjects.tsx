@@ -2,6 +2,7 @@ import { Arrow } from '@/assets';
 import { Button } from '@/components/Button';
 import { ProjectCard } from '@/components/ProjectCard';
 import { addtionalProjects } from '@/constants/projects';
+import { useInversion } from '@/hooks/useInversion';
 import { Column } from '@/layouts/Column';
 import { Section } from '@/layouts/Section';
 import { useNavigate } from 'react-router-dom';
@@ -23,8 +24,8 @@ export const AdditionalProjects = () => {
         description="추가적인 프로젝트들이에요."
       >
         <_SpaceBetween>
-          {addtionalProjects.map((addtionalProject) => (
-            <ProjectCard {...addtionalProject} />
+          {addtionalProjects.map((addtionalProject, idx) => (
+            <ProjectCard key={idx} {...addtionalProject} />
           ))}
         </_SpaceBetween>
       </Section>
