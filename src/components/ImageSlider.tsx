@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 import { useState } from 'react';
+import { UnLabeledArrow } from '@/assets/UnLabeledArrow';
 
 interface ImageSliderProps {
   images: string[];
+  width?: string;
 }
 
 const SliderContainer = styled.div`
   display: flex;
-  overflow-x: scroll;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 `;
 
@@ -52,7 +54,7 @@ const _Ball = styled.div<{ isCurrent: boolean }>`
     isCurrent ? theme.color.point : theme.color.gray300};
 `;
 
-export const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
+export const ImageSlider = ({ images, width }: ImageSliderProps) => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
 
   const handleNextSlide = () => {
@@ -64,7 +66,7 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
   };
 
   return (
-    <div style={{ position: 'relative' }}>
+    <_Wrapper width={width}>
       <SliderContainer>
         {images.map((imageUrl, index) => (
           <SliderImage
@@ -84,8 +86,17 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
           />
         ))}
       </_BallWrapper>
-      <PrevButton onClick={handlePrevSlide}>Prev</PrevButton>
-      <NextButton onClick={handleNextSlide}>Next</NextButton>
-    </div>
+      <PrevButton onClick={handlePrevSlide}>
+        <UnLabeledArrow direction="left" />
+      </PrevButton>
+      <NextButton onClick={handleNextSlide}>
+        <UnLabeledArrow />
+      </NextButton>
+    </_Wrapper>
   );
 };
+
+const _Wrapper = styled.div<{ width: string }>`
+  position: relative;
+  width: ${({ width }) => width};
+`;

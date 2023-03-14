@@ -16,7 +16,7 @@ export const Section = ({ title, description, children, id }: PropsType) => {
         {title}
       </_Text>
       {description && (
-        <_Description color="gray300" size="20px" weight="regular">
+        <_Description color="gray400" size="20px" weight="regular">
           {description}
         </_Description>
       )}

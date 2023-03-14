@@ -9,8 +9,9 @@ import { ProjectCard } from '@/components/ProjectCard';
 import { CircleArrow } from '@/assets';
 import { useNavigate } from 'react-router-dom';
 import { Technology } from './Technology';
-import { useInversion } from '@/hooks/useInversion';
-import { List } from '@/components/List';
+import { ImageSlider } from '@/components/ImageSlider';
+import { activitys } from '@/constants/activity';
+import { Activitys } from './activitys';
 
 export const SectionList = () => {
   const navigate = useNavigate();
@@ -20,18 +21,15 @@ export const SectionList = () => {
   return (
     <_SectionWrapper>
       <Section
-        id="projects"
-        title="projects"
-        description="저를 대표하는 프로젝트입니다"
+        id="skills"
+        title="skills"
+        description="제가 즐겨쓰는 기술이에요"
       >
-        <_SpaceBetween>
-          {projects.map((project, idx) => (
-            <ProjectCard key={idx} {...project} />
+        <_RowGap gap="45px">
+          {technologys.map((technology, idx) => (
+            <Technology key={idx} {...technology} />
           ))}
-        </_SpaceBetween>
-        <_Button onClick={additionalProjects} Icon={<CircleArrow />}>
-          추가적인 프로젝트 보기
-        </_Button>
+        </_RowGap>
       </Section>
       <Section
         id="blogs"
@@ -47,15 +45,18 @@ export const SectionList = () => {
         </_RowGap>
       </Section>
       <Section
-        id="skills"
-        title="skills"
-        description="제가 즐겨쓰는 기술이에요"
+        id="projects"
+        title="projects"
+        description="저를 대표하는 프로젝트입니다"
       >
-        <_RowGap gap="45px">
-          {technologys.map((technology, idx) => (
-            <Technology key={idx} {...technology} />
+        <_SpaceBetween>
+          {projects.map((project, idx) => (
+            <ProjectCard key={idx} {...project} />
           ))}
-        </_RowGap>
+        </_SpaceBetween>
+        <_Button onClick={additionalProjects} Icon={<CircleArrow />}>
+          추가적인 프로젝트 보기
+        </_Button>
       </Section>
       <Section
         id="activitys"
@@ -63,31 +64,12 @@ export const SectionList = () => {
         description="제가한 활동들이에요"
       >
         <_RowGap gap="45px">
-          <div>
-            <_Title weight="medium" size="24px">
-              2022년
-            </_Title>
-            <_Text size="20px" weight="light">
-              <List listItem={[<div>스마트테크</div>]} />
-            </_Text>
-          </div>
-          <div>
-            <_Title weight="medium" size="24px">
-              2021년
-            </_Title>
-            <_Text size="20px" weight="light">
-              <List listItem={[<div>대덕SW마이스터고 입학</div>]} />
-            </_Text>
-          </div>
+          <Activitys />
         </_RowGap>
       </Section>
     </_SectionWrapper>
   );
 };
-
-const _Title = styled(_Text)`
-  margin-bottom: 29px;
-`;
 
 const _SectionWrapper = styled.div`
   display: flex;

@@ -16,7 +16,7 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.(svg|jpg|png|gif|eot|ttf|woff|woff2)$/i,
+        test: /\.(svg|jpg|jpeg|png|gif|eot|ttf|woff|woff2)$/i,
         type: 'asset',
         parser: {
           dataUrlCondition: {

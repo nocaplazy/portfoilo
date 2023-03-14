@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const TooltipWrapper = styled.div`
@@ -8,6 +7,8 @@ const TooltipWrapper = styled.div`
 `;
 
 const TooltipContent = styled.span`
+  display: inline-block;
+  width: fit-content;
   visibility: hidden;
   background-color: black;
   color: #fff;

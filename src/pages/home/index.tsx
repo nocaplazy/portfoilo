@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import { SectionList } from './sectionList';
 import { Ending } from './Ending';
 import { useInversion } from '@/hooks/useInversion';
+import { Footer } from './Footer';
 
 export const HomePage = () => {
   return (
@@ -19,6 +20,7 @@ export const HomePage = () => {
         <_List listItem={listItem} />
         <SectionList />
         <Ending />
+        <Footer />
       </Column>
     </HeaderWrapper>
   );

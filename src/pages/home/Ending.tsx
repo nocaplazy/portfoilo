@@ -12,5 +12,5 @@ export const Ending = () => {
 const _Center = styled.div`
   display: flex;
   justify-content: center;
-  margin: 280px 0;
+  margin: 150px 0;
 `;
