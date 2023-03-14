@@ -1,15 +1,28 @@
+import { GithubSvg, LinkSvg } from '@/assets';
 import { Tooltip } from '@/components/ToolTip';
 import styled from 'styled-components';
 
 interface PropsType {
   href: string;
-  Icon: JSX.Element;
+  Icon: IconType;
 }
+
+const IconObj = {
+  link: {
+    icon: <LinkSvg />,
+    description: '링크',
+  },
+  github: {
+    icon: <GithubSvg />,
+    description: '깃허브',
+  },
+};
+export type IconType = keyof typeof IconObj;
 
 export const Anchor = ({ href, Icon }: PropsType) => {
   return (
-    <Tooltip title={href}>
-      <Container href={href}>{Icon}</Container>
+    <Tooltip title={IconObj[Icon].description}>
+      <Container href={href}>{IconObj[Icon].icon}</Container>
     </Tooltip>
   );
 };

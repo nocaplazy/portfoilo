@@ -7,15 +7,10 @@ export const simplyProject: ProjectType = {
   MVP: '새 탭을 열 때마다 급식과 시간표를 보여주는 크롬 익스텐션',
   technologyStackList: ['react', 'typescript', 'webpack'],
   anchor: [
+    { Icon: 'github', url: 'https://github.com/jsh05/simply' },
     {
-      alt: 'simply',
-      url: 'https://github.com/jsh05/simply',
-      Icon: <GithubSvg />,
-    },
-    {
-      alt: 'chrome-webstore',
+      Icon: 'link',
       url: 'https://chrome.google.com/webstore/detail/simply/mbgbaioiffnffccjiianicpjaokimbkc?hl=ko&authuser=0',
-      Icon: <LinkSvg />,
     },
   ],
   features: [

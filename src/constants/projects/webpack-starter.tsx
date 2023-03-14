@@ -9,14 +9,12 @@ export const lazy05CreateReactApp: ProjectType = {
   technologyStackList: ['react', 'typescript', 'webpack'],
   anchor: [
     {
-      alt: 'jsh05',
+      Icon: 'github',
       url: 'https://github.com/jsh05',
-      Icon: <LinkSvg />,
     },
     {
-      alt: 'team-aliens-dev.dsm-dms.com',
+      Icon: 'github',
       url: 'http://team-aliens-dev.dsm-dms.com/login',
-      Icon: <LinkSvg />,
     },
   ],
   features: [],

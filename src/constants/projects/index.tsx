@@ -6,6 +6,7 @@ import { repo } from './repo';
 import { ReactNode } from 'react';
 import { lazy05CreateReactApp } from './webpack-starter';
 import { TagType } from '../Icon';
+import { IconType } from '@/components/project/Anchor';
 
 interface FunctionType {
   summary: string;
@@ -13,9 +14,8 @@ interface FunctionType {
 }
 
 interface UrlType {
-  alt: string;
   url: string;
-  Icon: JSX.Element;
+  Icon: IconType;
 }
 
 export interface ProjectType {

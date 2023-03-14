@@ -8,9 +8,8 @@ export const repo: ProjectType = {
   technologyStackList: ['next', 'typescript'],
   anchor: [
     {
-      alt: 'team-aliens-dev.dsm-dms.com',
-      url: 'http://team-aliens-dev.dsm-dms.com/login',
-      Icon: <LinkSvg />,
+      Icon: 'link',
+      url: 'https://www.dsm-repo.com/',
     },
   ],
   features: [],

@@ -63,7 +63,7 @@ export const ProjectDetailModal = ({
           </_IconWrapper>
           <_LinkWrapper>
             {anchor &&
-              anchor.map(({ url, alt, Icon }, idx) => (
+              anchor.map(({ url, Icon }, idx) => (
                 <Anchor key={idx} href={url} Icon={Icon} />
               ))}
           </_LinkWrapper>
