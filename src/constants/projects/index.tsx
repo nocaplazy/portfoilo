@@ -28,6 +28,7 @@ export interface ProjectType {
   thumnail: string;
   role: string;
   personnel: string;
+  projectImg: string[];
 }
 
 export const projects = [scouit, lazy05CreateReactApp];

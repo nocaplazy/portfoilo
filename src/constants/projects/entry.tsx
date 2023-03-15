@@ -9,6 +9,7 @@ export const entry: ProjectType = {
   technologyStackList: ['react', 'typescript', 'redux'],
   anchor: [{ Icon: 'github', url: 'https://www.entrydsm.hs.kr/' }],
   features: [],
+  projectImg: [],
   thumnail: entryImg,
   role: '',
   personnel: '',

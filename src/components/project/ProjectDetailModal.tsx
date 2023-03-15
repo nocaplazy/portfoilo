@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import { Tooltip } from '../ToolTip';
 import { Close } from '@/assets/svgs/Close';
 import { Arrow } from '@/assets';
+import { ImageSlider } from '../ImageSlider';
 
 interface PropsType {
   handleCloseModal: () => void;
@@ -35,6 +36,7 @@ export const ProjectDetailModal = ({
     anchor,
     thumnail,
     features,
+    projectImg,
   } = [...projects, ...addtionalProjects].find(({ id }) => id === routeId);
 
   return (
@@ -71,7 +73,8 @@ export const ProjectDetailModal = ({
           </_LinkWrapper>
         </_FlexWrap>
         <MinimumViableProduct description={MVP} />
-        <img width={'100%'} src={thumnail} />
+        {/* <img width={'100%'} src={thumnail} /> */}
+        <ImageSlider images={projectImg} />
         <Template title="이슈">
           {features.map(({ summary, detail }, idx) => (
             <Expandable key={idx} title={summary}>

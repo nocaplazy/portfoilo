@@ -13,6 +13,7 @@ export const repo: ProjectType = {
     },
   ],
   features: [],
+  projectImg: [],
   thumnail: repoImg,
   role: '',
   personnel: '',

@@ -17,6 +17,7 @@ export const lazy05CreateReactApp: ProjectType = {
       url: 'http://team-aliens-dev.dsm-dms.com/login',
     },
   ],
+  projectImg: [],
   features: [],
   thumnail: lazy05,
   role: '',

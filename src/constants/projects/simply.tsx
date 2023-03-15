@@ -18,6 +18,7 @@ export const simplyProject: ProjectType = {
     { summary: '학교 검색 및 정보 등록', detail: '' },
     { summary: '알러지 식품 등록', detail: '' },
   ],
+  projectImg: [],
   thumnail: simply,
   role: '프론트엔드 및 디자인',
   personnel: '개인 프로젝트',
