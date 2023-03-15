@@ -34,5 +34,5 @@ export const dms: ProjectType = {
   ],
   thumnail: projectImg,
   role: '',
-  personnel: '',
+  personnel: '팀 프로젝트',
 };

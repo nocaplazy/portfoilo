@@ -9,6 +9,7 @@ import { Tag } from '@/constants/Icon';
 import { useEffect } from 'react';
 import { Tooltip } from '../ToolTip';
 import { Close } from '@/assets/svgs/Close';
+import { Arrow } from '@/assets';
 
 interface PropsType {
   handleCloseModal: () => void;
@@ -38,6 +39,7 @@ export const ProjectDetailModal = ({
 
   return (
     <ModalContainer
+      id="mod"
       onClick={(e) => {
         e.stopPropagation();
         handleCloseModal();
@@ -50,9 +52,9 @@ export const ProjectDetailModal = ({
           </_Text>
           <_Close onClick={handleCloseModal} />
         </_Header>
-        <_Text color="gray300" size="20px" weight="regular">
+        <_Personnel color="gray300" size="20px" weight="regular">
           {personnel}
-        </_Text>
+        </_Personnel>
         <_FlexWrap>
           <_IconWrapper>
             {technologyStackList.map((tag, idx) => (
@@ -70,7 +72,7 @@ export const ProjectDetailModal = ({
         </_FlexWrap>
         <MinimumViableProduct description={MVP} />
         <img width={'100%'} src={thumnail} />
-        <Template title="기능">
+        <Template title="이슈">
           {features.map(({ summary, detail }, idx) => (
             <Expandable key={idx} title={summary}>
               {detail}
@@ -79,9 +81,45 @@ export const ProjectDetailModal = ({
         </Template>
         <Template title="당담역할">fqwqfw</Template>
       </ModalContent>
+      <ScrollTop
+        onClick={(e) => {
+          e.stopPropagation();
+          document.querySelector('#mod').scrollTo({
+            top: 0,
+            behavior: 'smooth',
+          });
+        }}
+      >
+        <Arrow size={40} direction="top" color="gray100" />
+      </ScrollTop>
     </ModalContainer>
   );
 };
+
+const _Personnel = styled(_Text)`
+  margin-top: 10px;
+`;
+
+const ScrollTop = styled.button`
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  right: 100px;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
+  background-color: ${({ theme }) => theme.color.gray800};
+  border-radius: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 12;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+  &:hover {
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+`;
 
 const _Close = styled(Close)`
   cursor: pointer;

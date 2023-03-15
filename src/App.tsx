@@ -6,6 +6,8 @@
 // 다국어 지원
 // 텍스트 최초방문시 위에서 아래로
 import { Route, Routes } from 'react-router-dom';
+import styled from 'styled-components';
+import { Arrow } from './assets';
 import { AdditionalProjects } from './pages/AdditionalProjects';
 import { HomePage } from './pages/home';
 import { StyleProvider } from './styles';
