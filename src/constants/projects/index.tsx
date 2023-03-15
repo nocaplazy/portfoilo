@@ -24,7 +24,7 @@ export interface ProjectType {
   MVP: string;
   technologyStackList: TagType[];
   anchor: UrlType[];
-  features: FunctionType[];
+  issues?: FunctionType[];
   thumnail: string;
   role: string;
   personnel: string;

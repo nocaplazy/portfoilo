@@ -14,7 +14,6 @@ export const scouit: ProjectType = {
       Icon: 'github',
     },
   ],
-  features: [],
   projectImg: [],
   thumnail: Scouit,
   role: '',

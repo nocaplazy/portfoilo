@@ -11,6 +11,7 @@ const SliderContainer = styled.div`
   display: flex;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  align-items: center;
 `;
 
 const SliderImage = styled.img`
@@ -23,7 +24,7 @@ const SliderImage = styled.img`
 const Button = styled.button`
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
   font-size: 1.5rem;
   border: none;
   cursor: pointer;
@@ -76,6 +77,12 @@ export const ImageSlider = ({ images, width }: ImageSliderProps) => {
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           />
         ))}
+        <PrevButton onClick={handlePrevSlide}>
+          <UnLabeledArrow direction="left" />
+        </PrevButton>
+        <NextButton onClick={handleNextSlide}>
+          <UnLabeledArrow />
+        </NextButton>
       </SliderContainer>
       <_BallWrapper>
         {images.map((imgUrl, idx) => (
@@ -86,12 +93,6 @@ export const ImageSlider = ({ images, width }: ImageSliderProps) => {
           />
         ))}
       </_BallWrapper>
-      <PrevButton onClick={handlePrevSlide}>
-        <UnLabeledArrow direction="left" />
-      </PrevButton>
-      <NextButton onClick={handleNextSlide}>
-        <UnLabeledArrow />
-      </NextButton>
     </_Wrapper>
   );
 };

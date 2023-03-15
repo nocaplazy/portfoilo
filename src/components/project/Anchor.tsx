@@ -22,7 +22,9 @@ export type IconType = keyof typeof IconObj;
 export const Anchor = ({ href, Icon }: PropsType) => {
   return (
     <Tooltip title={IconObj[Icon].description}>
-      <Container href={href}>{IconObj[Icon].icon}</Container>
+      <Container target={'_blank'} href={href}>
+        {IconObj[Icon].icon}
+      </Container>
     </Tooltip>
   );
 };

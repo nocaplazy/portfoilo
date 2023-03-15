@@ -13,11 +13,6 @@ export const simplyProject: ProjectType = {
       url: 'https://chrome.google.com/webstore/detail/simply/mbgbaioiffnffccjiianicpjaokimbkc?hl=ko&authuser=0',
     },
   ],
-  features: [
-    { summary: '시간표 및 급식', detail: '' },
-    { summary: '학교 검색 및 정보 등록', detail: '' },
-    { summary: '알러지 식품 등록', detail: '' },
-  ],
   projectImg: [],
   thumnail: simply,
   role: '프론트엔드 및 디자인',

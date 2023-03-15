@@ -29,9 +29,9 @@ export const ProjectCard = ({
         <_Title size="24px" weight="medium">
           {title}
         </_Title>
-        <_Text color="gray300" size="20px" weight="regular">
+        <_MVP color="gray400" size="20px" weight="regular">
           {MVP}
-        </_Text>
+        </_MVP>
         <_FlexWrap>
           {technologyStackList.map((tag, idx) => (
             <Tooltip key={idx} title={tag}>
@@ -48,6 +48,10 @@ export const ProjectCard = ({
     </>
   );
 };
+
+const _MVP = styled(_Text)`
+  line-height: 30px;
+`;
 
 const _Title = styled(_Text)`
   margin: 40px 0 20px 0;

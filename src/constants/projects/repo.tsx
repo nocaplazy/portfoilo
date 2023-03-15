@@ -12,7 +12,6 @@ export const repo: ProjectType = {
       url: 'https://www.dsm-repo.com/',
     },
   ],
-  features: [],
   projectImg: [],
   thumnail: repoImg,
   role: '',

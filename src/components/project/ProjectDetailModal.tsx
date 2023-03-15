@@ -35,7 +35,7 @@ export const ProjectDetailModal = ({
     technologyStackList,
     anchor,
     thumnail,
-    features,
+    issues,
     projectImg,
   } = [...projects, ...addtionalProjects].find(({ id }) => id === routeId);
 
@@ -75,13 +75,15 @@ export const ProjectDetailModal = ({
         <MinimumViableProduct description={MVP} />
         {/* <img width={'100%'} src={thumnail} /> */}
         <ImageSlider images={projectImg} />
-        <Template title="이슈">
-          {features.map(({ summary, detail }, idx) => (
-            <Expandable key={idx} title={summary}>
-              {detail}
-            </Expandable>
-          ))}
-        </Template>
+        {issues && (
+          <Template title="이슈">
+            {issues.map(({ summary, detail }, idx) => (
+              <Expandable key={idx} title={summary}>
+                {detail}
+              </Expandable>
+            ))}
+          </Template>
+        )}
         <Template title="당담역할">fqwqfw</Template>
       </ModalContent>
       <ScrollTop

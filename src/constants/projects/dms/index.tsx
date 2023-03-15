@@ -14,20 +14,10 @@ export const dms: ProjectType = {
   MVP: '매번 수기로 작성하는 것, 불편하시죠? DMS에서 편리하게 기숙사를 관리해보세요!\n DMS는 전국의 모든 학교 통합 기숙사 관리 서비스입니다.',
   technologyStackList: ['react', 'typescript', 'webpack', 'storyBook'],
   anchor: [
-    { Icon: 'github', url: 'https://github.com/jsh05' },
+    { Icon: 'github', url: 'https://github.com/team-aliens/dms-front-admin' },
     {
       Icon: 'link',
-      url: 'http://team-aliens-dev.dsm-dms.com/login',
-    },
-  ],
-  features: [
-    {
-      summary: 'auth',
-      detail: (
-        <div>
-          <ImageSlider images={[]} />
-        </div>
-      ),
+      url: 'https://admin.aliens-dms.com/',
     },
   ],
   projectImg: [a, d, e, f, g, i],

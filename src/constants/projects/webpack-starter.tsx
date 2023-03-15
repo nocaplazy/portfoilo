@@ -18,7 +18,6 @@ export const lazy05CreateReactApp: ProjectType = {
     },
   ],
   projectImg: [],
-  features: [],
   thumnail: lazy05,
   role: '',
   personnel: '',

@@ -8,7 +8,6 @@ export const entry: ProjectType = {
   MVP: '우리 학교로 오세요! 대덕소프트웨어마이스터고등학교의 입학 전형 시스템입니다.',
   technologyStackList: ['react', 'typescript', 'redux'],
   anchor: [{ Icon: 'github', url: 'https://www.entrydsm.hs.kr/' }],
-  features: [],
   projectImg: [],
   thumnail: entryImg,
   role: '',
